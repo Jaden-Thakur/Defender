@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"enemy_types",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"enemy_types",
+  "parent":{
+    "name":"Characters",
+    "path":"folders/Scripts/Structs/Characters.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

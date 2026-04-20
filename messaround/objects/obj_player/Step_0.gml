@@ -10,5 +10,5 @@ bullet_spawn_offset = 2;
 if (mouse_check_button(mb_left) and !shoot_cooldown) {
 	shoot_cooldown = true;
 	instance_create_layer(x + sprite_width/2 + bullet_spawn_offset, y, "Instances", obj_bullet);
-	alarm[0] = game_get_speed(gamespeed_fps) * 0.25;
+	alarm[0] = game_get_speed(gamespeed_fps) * 0.35;
 }

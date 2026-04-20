@@ -1,1 +1,1 @@
-global.current_level = 1;
+curr_score = 0;
