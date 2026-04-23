@@ -49,7 +49,9 @@
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_score_manager","path":"objects/obj_score_manager/obj_score_manager.yy",},},
     {"id":{"name":"obj_ui_manager","path":"objects/obj_ui_manager/obj_ui_manager.yy",},},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
+    {"id":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"id":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
     {"id":{"name":"enemy_types","path":"scripts/enemy_types/enemy_types.yy",},},
     {"id":{"name":"powerups","path":"scripts/powerups/powerups.yy",},},
     {"id":{"name":"spr_brick","path":"sprites/spr_brick/spr_brick.yy",},},
@@ -67,7 +69,9 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_start","path":"rooms/rm_start/rm_start.yy",},},
+    {"roomId":{"name":"rm_game","path":"rooms/rm_game/rm_game.yy",},},
+    {"roomId":{"name":"rm_end","path":"rooms/rm_end/rm_end.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

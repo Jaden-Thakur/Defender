@@ -1,5 +1,4 @@
 global.current_level = 0;
-global.game_over = false;
 
 spawn = true;
 spawn_rate = 1; //seconds to spawn enemy
