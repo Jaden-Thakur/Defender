@@ -6,6 +6,6 @@ function enemy_type(_spd, _def, _dmg, _spr, _type) constructor {
 	type = _type
 }
 
-global.nrm_enemy = new enemy_type(3, 3, 2, spr_enemy_1, "nrm");
+global.nrm_enemy = new enemy_type(3, 2, 2, spr_enemy_1, "nrm");
 global.spd_enemy = new enemy_type(6, 1, 1, spr_enemy_2, "spd");
 global.str_enemy = new enemy_type(1, 6, 4, spr_enemy_3, "str");

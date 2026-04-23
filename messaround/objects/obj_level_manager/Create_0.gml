@@ -13,8 +13,8 @@ enum EnemyTypes {
 
 enemies = [global.nrm_enemy, global.spd_enemy, global.str_enemy]
 
-function spawn_enemy(_type) {
-	new_enemy = instance_create_layer(x_spawn, y_spawn, "Instances", obj_enemy);
+function spawn_enemy(_type, _x, _y) {
+	new_enemy = instance_create_layer(_x, _y, "Instances", obj_enemy);
 	new_enemy.type = enemies[_type].type;
 	new_enemy.def = enemies[_type].def;
 	new_enemy.spd = enemies[_type].spd;

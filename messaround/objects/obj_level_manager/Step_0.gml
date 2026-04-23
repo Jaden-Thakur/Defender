@@ -7,10 +7,10 @@ while(enemies_to_spawn and spawn) {
 	enemy_sprite_width = sprite_get_width(enemies[e_type].spr);
 	// enemy spawn positions
 	num_of_lanes = room_height div enemy_sprite_height;
-	lane = random_range(0, num_of_lanes);
+	lane = irandom_range(0, num_of_lanes-1);
 	x_spawn = room_width + enemy_sprite_width/2;
-	y_spawn = lane * enemy_sprite_height + enemy_sprite_height/2;
-	enemy = spawn_enemy(e_type);
+	y_spawn = (lane * enemy_sprite_height) + (enemy_sprite_height * 0.75);
+	enemy = spawn_enemy(e_type, x_spawn, y_spawn);
 	e_index++;
 	enemies_to_spawn--;
 	spawn = false;
