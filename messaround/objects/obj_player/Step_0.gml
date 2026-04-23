@@ -12,3 +12,7 @@ if (mouse_check_button(mb_left) and !shoot_cooldown) {
 	instance_create_layer(x + sprite_width/2 + bullet_spawn_offset, y, "Instances", obj_bullet);
 	alarm[0] = game_get_speed(gamespeed_fps) * 0.35;
 }
+
+if (global.player_health <=0) {
+	global.game_over = true;
+}

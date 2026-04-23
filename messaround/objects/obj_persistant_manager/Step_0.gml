@@ -1,3 +1,3 @@
-if (global.player_health <= 0) {
+if (global.game_over) {
 	game_end();
 }

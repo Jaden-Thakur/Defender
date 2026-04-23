@@ -1,17 +1,14 @@
-global.current_level = 1;
-
-enemies_to_spawn = 10;
-
-
-
+global.current_level = 0;
+global.game_over = false;
 
 spawn = true;
 spawn_rate = 1; //seconds to spawn enemy
+time_between_lvls = 5;
 
 enum EnemyTypes {
-	nrm_enemy,
-	spd_enemy,
-	str_enemy
+	nrm,
+	spd,
+	str
 }
 
 enemies = [global.nrm_enemy, global.spd_enemy, global.str_enemy]
@@ -26,3 +23,17 @@ function spawn_enemy(_type) {
 	
 	return new_enemy;
 }
+
+//LVL SPAWN ORDERS
+lvls = 
+[
+	[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+	[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd,  EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str],
+];
+
+
+e_index = 0;
+enemies_to_spawn = array_length(lvls[global.current_level]);

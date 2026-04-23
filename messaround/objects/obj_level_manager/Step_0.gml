@@ -1,7 +1,8 @@
 // enemy spawner
 
 while(enemies_to_spawn and spawn) {
-	e_type = random_range(0, 3);
+	//e_type = random_range(0, 3);
+	e_type = lvls[global.current_level][e_index];
 	enemy_sprite_height = sprite_get_height(enemies[e_type].spr);
 	enemy_sprite_width = sprite_get_width(enemies[e_type].spr);
 	// enemy spawn positions
@@ -10,7 +11,27 @@ while(enemies_to_spawn and spawn) {
 	x_spawn = room_width + enemy_sprite_width/2;
 	y_spawn = lane * enemy_sprite_height + enemy_sprite_height/2;
 	enemy = spawn_enemy(e_type);
+	e_index++;
 	enemies_to_spawn--;
 	spawn = false;
-	alarm[0] =  game_get_speed(gamespeed_fps) * spawn_rate;
+	if (enemies_to_spawn) {
+		alarm[0] =  game_get_speed(gamespeed_fps) * spawn_rate;
+	}
+}
+
+if (!enemies_to_spawn and !spawn and global.current_level < array_length(lvls) and !instance_exists(obj_enemy)) {
+	alarm[1] = game_get_speed(gamespeed_fps) * time_between_lvls;
+	global.current_level++;
+	if (global.current_level != array_length(lvls)){
+	enemies_to_spawn = array_length(lvls[global.current_level]);
+	} else {
+		enemies_to_spawn = 0;
+	}
+	e_index = 0;
+}
+
+if (global.current_level >= array_length(lvls) ) {
+	global.game_over = true;
+	global.current_level = 0;
+	e_index = 0;
 }
