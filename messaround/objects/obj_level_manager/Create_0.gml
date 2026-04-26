@@ -19,20 +19,24 @@ function spawn_enemy(_type, _x, _y) {
 	new_enemy.spd = enemies[_type].spd;
 	new_enemy.dmg = enemies[_type].dmg;
 	new_enemy.spr = enemies[_type].spr;
+	new_enemy.pts = enemies[_type].pts;
 	
 	return new_enemy;
 }
 
-//LVL SPAWN ORDERS
-lvls = 
-[
-	[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
-	[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
-	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
-	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
-	[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd,  EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str],
-];
+if (global.mode = "story") {
+
+	//LVL SPAWN ORDERS
+	lvls = 
+	[
+		[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+		[EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+		[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+		[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm,  EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.nrm],
+		[EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.str, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd,  EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.spd, EnemyTypes.nrm, EnemyTypes.nrm, EnemyTypes.str],
+	];
 
 
-e_index = 0;
-enemies_to_spawn = array_length(lvls[global.current_level]);
+	e_index = 0;
+	enemies_to_spawn = array_length(lvls[global.current_level]);
+} 

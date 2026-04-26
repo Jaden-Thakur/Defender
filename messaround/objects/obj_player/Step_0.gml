@@ -13,6 +13,6 @@ if (mouse_check_button(mb_left) and !shoot_cooldown) {
 	alarm[0] = game_get_speed(gamespeed_fps) * 0.35;
 }
 
-if (global.player_health <=0) {
+if (global.player_health <= 0) {
 	global.game_over = true;
 }
