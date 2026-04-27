@@ -1,4 +1,6 @@
-x -= spd;
+if (!global.pause) {
+	x -= spd;
+}
 
 if ( def <= 0) {
 	if (global.mode =="endless") {

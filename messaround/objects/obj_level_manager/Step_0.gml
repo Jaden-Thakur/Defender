@@ -59,3 +59,10 @@ if global.mode = "story"{
 		}
 	}
 }
+
+if (global.pause and alarm[0] > 0) {
+	alarm[0]++;
+}
+if (global.pause and alarm[1] > 0) {
+	alarm[1]++;
+}

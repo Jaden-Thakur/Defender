@@ -8,3 +8,6 @@ if (global.game_over) {
 	global.game_over = false;
 	
 }
+if (room = rm_end and keyboard_check_pressed(vk_space)) {
+	room = rm_start;
+}

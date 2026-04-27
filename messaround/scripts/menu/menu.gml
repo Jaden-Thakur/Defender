@@ -1,8 +1,9 @@
 #macro menu_line_height 20
 #macro menu_margin 10
 
-function menu(_x, _y, _opt, _des = -1){
-	with (instance_create_depth(_x, _y, -999, obj_menu)) {
+function menu(_x, _y, _opt, _des = -1) {
+	var _menu = instance_create_depth(_x, _y, -999, obj_menu);
+	with (_menu) {
 		options = _opt;
 		description = _des;
 		num_options =array_length(_opt);
@@ -35,7 +36,8 @@ function menu(_x, _y, _opt, _des = -1){
 		
 		
 	}
-
+	
+	return _menu;
 }
 
 function story(){

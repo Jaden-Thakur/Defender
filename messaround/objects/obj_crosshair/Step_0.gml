@@ -1,2 +1,4 @@
-x = mouse_x;
-y = mouse_y;
+if (!global.pause) {
+	x = mouse_x;
+	y = mouse_y;
+}

@@ -1,2 +1,4 @@
-x += x_spd;
-y += y_spd;
+if (!global.pause) {
+	x += x_spd;
+	y += y_spd;
+}
