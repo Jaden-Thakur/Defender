@@ -10,7 +10,14 @@ enum EnemyTypes {
 	str
 }
 
+enum PowerUps {
+	shotgun, 
+	dmg_boost,
+	rapidfire,
+}
+
 enemies = [global.nrm_enemy, global.spd_enemy, global.str_enemy]
+pUps = [global.shotgun, global.dmg_boost, global.rapid_fire];
 
 function spawn_enemy(_type, _x, _y) {
 	new_enemy = instance_create_layer(_x, _y, "Instances", obj_enemy);
@@ -40,3 +47,15 @@ if (global.mode = "story") {
 	e_index = 0;
 	enemies_to_spawn = array_length(lvls[global.current_level]);
 } 
+
+function spawn_powerup(_type, _x, _y) {
+	new_powerup = instance_create_layer(_x, _y, "Instances", obj_power_up);
+	with(new_powerup) {
+		index = other.pUps[_type].sprite;
+		duration = other.pUps[_type].duration;
+		type = other.pUps[_type].type;
+	}
+	
+	return new_powerup;
+	
+}

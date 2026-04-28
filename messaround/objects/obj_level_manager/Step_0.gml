@@ -12,8 +12,27 @@ if global.mode = "story"{
 		y_spawn = (lane * enemy_sprite_height) + (enemy_sprite_height * 0.75);
 		enemy = spawn_enemy(e_type, x_spawn, y_spawn);
 		e_index++;
+		
+		
+		
+		// powerup spawns
+		
+		p_up_lane = irandom_range(0, num_of_lanes-1);
+		p_up_y_spawn = (p_up_lane * enemy_sprite_height) + (enemy_sprite_height * 0.75);
+		if (global.current_level == 1 and enemies_to_spawn == 5 and spawn) {
+			spawn_powerup(PowerUps.shotgun, x_spawn, p_up_y_spawn);
+		}
+		if (global.current_level == 2 and enemies_to_spawn == 5 and spawn) {
+			spawn_powerup(PowerUps.rapidfire, x_spawn, p_up_y_spawn);
+		}
+		if (global.current_level == 3 and enemies_to_spawn == 5 and spawn) {
+			spawn_powerup(PowerUps.dmg_boost, x_spawn, p_up_y_spawn);
+		}
+		
 		enemies_to_spawn--;
 		spawn = false;
+	
+	
 		if (enemies_to_spawn) {
 			alarm[0] =  game_get_speed(gamespeed_fps) * spawn_rate;
 		}
@@ -35,6 +54,8 @@ if global.mode = "story"{
 		global.current_level = 0;
 		e_index = 0;
 	}
+	
+	
 } else {
 	while(spawn) {
 		e_chooser = random_range(0, 99);

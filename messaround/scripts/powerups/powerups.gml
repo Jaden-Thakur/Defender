@@ -4,7 +4,7 @@ function powerup(_spr, _type, _dur) constructor {
 	duration = _dur;
 }
 
-shotgun = new powerup(0, "shotgun", 20);
-dmg_boost = new powerup(1, "damage boost", 10);
-rapid_fire = new powerup(2, "rapidfire", 10);
+global.shotgun = new powerup(0, "shotgun", 5);
+global.dmg_boost = new powerup(1, "damage boost", 3);
+global.rapid_fire = new powerup(2, "rapidfire", 3);
 
