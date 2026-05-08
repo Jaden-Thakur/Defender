@@ -44,6 +44,7 @@
   },
   "name":"messaround",
   "resources":[
+    {"id":{"name":"f_body","path":"fonts/f_body/f_body.yy",},},
     {"id":{"name":"f_title","path":"fonts/f_title/f_title.yy",},},
     {"id":{"name":"obj_bullet","path":"objects/obj_bullet/obj_bullet.yy",},},
     {"id":{"name":"obj_button","path":"objects/obj_button/obj_button.yy",},},

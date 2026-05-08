@@ -7,12 +7,14 @@ if (room == rm_game) {
 	} else if (global.mode == "endless") {
 		draw_text(20, 40, "Score: " + string(global.curr_score));
 	}
+	layer_set_visible("EndCard", false);
 } else if (room == rm_start) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
 	// draw_text(room_width/2, room_height/2 , "start");
+	layer_set_visible("EndCard", false);
 } else if (room == rm_end) {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	draw_text(room_width/2, room_height/2 , "Ya Lose");
+	layer_set_visible("EndCard", true);
 }
