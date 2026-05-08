@@ -11,3 +11,9 @@ if (global.game_over) {
 if (room = rm_end and keyboard_check_pressed(vk_space)) {
 	room = rm_start;
 }
+
+if (room == rm_game and !global.pause) {
+	window_set_cursor(cr_none);
+} else {
+	window_set_cursor(cr_cross);
+}
