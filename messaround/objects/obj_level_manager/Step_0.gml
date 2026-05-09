@@ -42,7 +42,7 @@ if global.mode = "story"{
 		alarm[1] = game_get_speed(gamespeed_fps) * time_between_lvls;
 		global.current_level++;
 		if (global.current_level != array_length(lvls)){
-		enemies_to_spawn = array_length(lvls[global.current_level]);
+			enemies_to_spawn = array_length(lvls[global.current_level]);
 		} else {
 			enemies_to_spawn = 0;
 		}
@@ -51,8 +51,9 @@ if global.mode = "story"{
 
 	if (global.current_level >= array_length(lvls) ) {
 		global.game_over = true;
-		global.current_level = 0;
+		global.won = true;
 		e_index = 0;
+		
 	}
 	
 	

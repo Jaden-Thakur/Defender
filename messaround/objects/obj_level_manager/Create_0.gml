@@ -1,4 +1,6 @@
 global.current_level = 0;
+global.highest_level = 0;
+global.won = false;
 
 spawn = true;
 spawn_rate = 1; //seconds to spawn enemy
